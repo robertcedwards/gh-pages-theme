@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang='en'>
 	<head>
-		<title>My GitHub project</title>
+		<title>Twitter Bootstrap for Github Pages</title>
 		<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
 		<!--[if lt IE 9]><script type='text/javascript' src='assets/javascript/html5.js'></script><![endif]-->
-		<script type='text/javascript' src='assets/javascript/prettify.js'></script>
-
+  <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>		
+  <script type='text/javascript' src='assets/javascript/prettify.js'></script>
+    <script type='text/javascript' src='assets/javascript/bootstrap-collapse.js'></script>
 		<link rel='stylesheet' type='text/css' href='assets/css/style.css' />
 		<link rel='stylesheet' type='text/css' href='assets/css/bootstrap.css' />
 		<link rel='stylesheet' type='text/css' href='assets/css/prettify.css' />
+
 	</head>
-	<body onload='prettyPrint()'>
+	<body onload='prettyPrint();$(".collapse")();'>
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
@@ -18,8 +20,8 @@
         <div class="nav-collapse">
           <ul class="nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a><iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=robercedwards&repo=gh-pages-theme&type=watch"allowtransparency="true" frameborder="0" scrolling="0" width="62px" height="20px"></iframe></a></li>
-            <li><a><iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=robercedwards&repo=gh-pages-theme&type=fork"allowtransparency="true" frameborder="0" scrolling="0" width="62px" height="20px"></iframe></a></li>
+            <li><a><iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=robertcedwards&repo=gh-pages-theme&type=watch"allowtransparency="true" frameborder="0" scrolling="0" width="62px" height="20px"></iframe></a></li>
+            <li><a><iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=robertcedwards&repo=gh-pages-theme&type=fork"allowtransparency="true" frameborder="0" scrolling="0" width="62px" height="20px"></iframe></a></li>
           </ul>
         </div><!-- /.nav-collapse -->
       </div>
@@ -46,9 +48,58 @@
           <span class="alert alert-success">Alerts!</span>
           <span class="btn">&</span>
         </span>
-        <button class="span4 btn">Grids</span>
-        <button class="span4 btn">Oh</span>
-        <button class="span4 btn">My!</span>
+        <button class="span4 btn">Grids</button>
+        <button class="span4 btn">Oh</button>
+        <button class="span4 btn">My!</button>
+              </div>
+              <hr/>
+        <button class="btn btn-danger" data-toggle="collapse" data-target="#more">Show me more examples&#8230;</button>
+      
+        <div id='more'class='row collapse'>
+        <span class="span4 alert">Code Examples
+          <pre class='prettyprint'>
+&lt;script&gt;
+function display_awesomeness();
+{
+  alert("Awesomeness!");
+}
+&lt;/script&gt;
+&lt;form&gt;
+  &lt;input type="button" value="Click me!" onclick="display_awesomeness()" /&gt;
+&lt;/form&gt;
+          </pre>
+        </span>
+        <ul class="thumbnails span4">
+        <li class="">
+          <div class="thumbnail">
+            <img src="http://placehold.it/260x180" alt="">
+            <div class="caption">
+              <h5>Thumbnail label</h5>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a href="#" class="btn btn-primary">Action</a> <a href="#" class="btn">Action</a></p>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="span4">
+      <ul class="nav nav-tabs ">
+        <li class="active">
+          <a href="">Home</a>
+        </li>
+        <li><a href="">...</a></li>
+        <li><a href="">...</a></li>
+      </ul>
+      </div>
+      <span class="span4">
+<form class="well">
+  <label>Label name</label>
+  <input type="text" class="span3" placeholder="Type something…">
+  <span class="help-block">Example block-level help text here.</span>
+  <label class="checkbox">
+    <input type="checkbox"> Check me out
+  </label>
+  <button type="submit" class="btn">Submit</button>
+</form>      </span>
       </div>
       <hr class="soften"/>
       <p>This command will add this theme to a new branch called gh-pages and wipe out anything else there.</p>
@@ -141,5 +192,5 @@
         </footer>
 	</div>
   <a href='https://github.com/USER/REPOSITORY' class='github-ribbon'><img src='assets/images/github-ribbons/red.png' /></a>
-	</body>
+  </body>
 </html>
